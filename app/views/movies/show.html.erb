@@ -1,0 +1,12 @@
+<div class="container pt-3">
+  <h2><%= @movie.title %></h2>
+
+  <ul>
+    <li><img src="<%= @movie.poster_url %>" alt="" style="height:300px;"></li>
+    <li>Overview: <%= @movie.overview %></li>
+    <li>Rating: <%= @movie.rating %></li>
+  </ul>
+
+    <%= link_to "Home", root_path() %>
+    <%= link_to "Back to movies", movies_path %>
+</div>

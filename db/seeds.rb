@@ -26,22 +26,24 @@ m4 = Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal ma
 l1 = List.create(name: "Horror")
 l2 = List.create(name: "Thriller")
 l3 = List.create(name: "My Favourite Movies")
+lists = %w[l1 l2 l3]
 Bookmark.create(comment: "The greatest escape movie ever", list_id: l3.id, movie_id: m2.id )
 Bookmark.create(comment: "A Love movie for the ages", list_id: l3.id, movie_id: m3.id )
 Bookmark.create(comment: "Absolute Trash Movie", list_id: l1.id, movie_id: m4.id )
 
-list['results'].each do |element|
-  movie = Movie.create(
-    title: element['title'],
-    overview: element['overview'],
-    rating: element['vote_average'],
-    poster_url: "https://image.tmdb.org/t/p/w500/#{element['poster_path']}"
-  )
-  puts "Title: #{movie.title}"
-  puts "Rating: #{movie.rating}"
-  puts "Poster: #{movie.poster_url}"
-  puts '-----------------------------------------------------'
-end
+# list['results'].each do |element|
+#   movie = Movie.create(
+#     title: element['title'],
+#     overview: element['overview'],
+#     rating: element['vote_average'],
+#     poster_url: "https://image.tmdb.org/t/p/w500/#{element['poster_path']}",
+#   )
+#   puts "id: #{movie.id}"
+#   puts "Title: #{movie.title}"
+#   puts "Rating: #{movie.rating}"
+#   puts "Poster: #{movie.poster_url}"
+#   puts '-----------------------------------------------------'
+# end
 
 
 # Faker seed below

@@ -1,0 +1,9 @@
+<div class="container pt-3">
+  <%= form_with model: @list do |f| %>
+    <%= f.text_field :comment %>
+    <%= f.association :movie %>
+    <%= f.association :list %>
+
+    <%= f.submit %>
+  <% end %>
+</div>

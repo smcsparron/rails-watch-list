@@ -1,0 +1,10 @@
+<div class="container pt-3">
+  <ul>
+    <% @bookmarks.each do |bookmark| %>
+      <li><%= link_to bookmark.comment, bookmark_path(bookmark) %></li>
+    <% end %>
+  </ul>
+
+    <%= link_to("New bookmark", new_list_bookmark_path) %>
+
+</div>

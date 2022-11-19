@@ -1,5 +1,11 @@
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= list.name %></li>
-  <% end %>
-</ul>
+<div class="container pt-3">
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to("New list", new_list_path) %>
+  <%= link_to("Movies", movies_path) %>
+
+</div>

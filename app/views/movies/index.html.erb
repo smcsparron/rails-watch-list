@@ -1,11 +1,11 @@
 <div class="container pt-3">
-  <h2><%= @list.name %></h2>
-
   <ul>
-    <% @list.movies.each do |movie| %>
+    <% @movies.each do |movie| %>
       <li><%= link_to movie.title, movie_path(movie) %></li>
     <% end %>
   </ul>
 
+  <%= link_to("New movie", new_movie_path) %>
   <%= link_to "Home", root_path() %>
+
 </div>
